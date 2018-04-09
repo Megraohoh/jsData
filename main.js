@@ -45,7 +45,7 @@ const emmanuelePainting = {
     description: "My favorite artist painted an abstract with the idea of a joyous woman being discussed negatively."
 }
 const cubanPainting = {
-    name: "Red Car in Cuba"
+    name: "Red Car in Cuba",
     location: "Kitchen Wall",
     description: "My mother visited Cuba and bought a painting by a street artist."
 }
@@ -75,4 +75,13 @@ HomeInventoryDatabase.antiques.push(stetson)
 HomeInventoryDatabase.antiques.push(watchFace)
 HomeInventoryDatabase.antiques.push(owls)
 
-console.log(HomeInventoryDatabase)
+//console.log(HomeInventoryDatabase) //Arrays are present!
+
+// Persist the database to localStorage
+const saveDatabase = function (databaseObject, localStorageKey) {
+
+    const stringifiedDatabase = JSON.stringify(databaseObject)
+
+    localStorage.setItem(localStorageKey, stringifiedDatabase)
+}
+saveDatabase(HomeInventoryDatabase, "HomeInventory")
