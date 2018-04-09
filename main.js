@@ -3,11 +3,12 @@ const HomeInventoryDatabase = {
 
 }
 
-HomeInventoryDatabase.gifts = []
+HomeInventoryDatabase.gifts = [] //key (gifts) whose value is a blank [array]
 HomeInventoryDatabase.crafts = []
 HomeInventoryDatabase.antiques = []
 
 //gifts
+//   .gifts is adding a property to the object (ex.skillets)
 const skillets = {
     name: "Iron Skillets",
     location: "Oven Plate Warming Drawer",
@@ -28,7 +29,7 @@ const heartPendant = {
     location: "Jewelry Box",
     description: "My dad gifted my mom the pendant and necklace years ago. She loves it but doesn't wear it anymore."
 }
-HomeInventoryDatabase.gifts.push(skillets)
+HomeInventoryDatabase.gifts.push(skillets) //adding object to "gifts" array
 HomeInventoryDatabase.gifts.push(woodPieces)
 HomeInventoryDatabase.gifts.push(postcards)
 HomeInventoryDatabase.gifts.push(heartPendant)
@@ -77,11 +78,11 @@ HomeInventoryDatabase.antiques.push(owls)
 
 //console.log(HomeInventoryDatabase) //Arrays are present!
 
-// Persist the database to localStorage
+// Persist the database to localStorage (localStorageKey is what we call it in local storage--dev tools)
 const saveDatabase = function (databaseObject, localStorageKey) {
-
+//JSON stringify is how local storage can read the data
     const stringifiedDatabase = JSON.stringify(databaseObject)
-
+    //Create a key in local storage, and store the string version of your inventory database as the value
     localStorage.setItem(localStorageKey, stringifiedDatabase)
 }
 saveDatabase(HomeInventoryDatabase, "HomeInventory")
