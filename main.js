@@ -26,6 +26,21 @@ const heartPendant = {
     description: "My dad gifted my mom the pendant and necklace years ago. She loves it but doesn't wear it anymore."
 }
 //crafts
+const galaxyPainting = {
+    name: "Black Galaxy",
+    location: "Living Room Wall",
+    description: "Kayla, my best friend, paints in her spare time. She panted a black galazy with splashes of purple and teal."
+}
+const emmanuelePainting = {
+    name: "The Persecution of Emmanuele",
+    location: "Living Room Wall",
+    description: "My favorite artist painted an abstract with the idea of a joyous woman being discussed negatively."
+}
+const cubanPainting = {
+    name: "Red Car in Cuba"
+    location: "Kitchen Wall",
+    description: "My mother visited Cuba and bought a painting by a street artist."
+}
 //antiques
 const stetson = {
     name: "Papaw's Stetson",
