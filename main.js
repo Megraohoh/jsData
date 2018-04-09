@@ -1,9 +1,12 @@
 // Define the database as an object
 const HomeInventoryDatabase = {
-    HomeInventoryDatabase.gifts = []
-    HomeInventoryDatabase.crafts = []
-    HomeInventoryDatabase.antiques = []
+
 }
+
+HomeInventoryDatabase.gifts = []
+HomeInventoryDatabase.crafts = []
+HomeInventoryDatabase.antiques = []
+
 //gifts
 const skillets = {
     name: "Iron Skillets",
@@ -25,6 +28,11 @@ const heartPendant = {
     location: "Jewelry Box",
     description: "My dad gifted my mom the pendant and necklace years ago. She loves it but doesn't wear it anymore."
 }
+HomeInventoryDatabase.gifts.push(skillets)
+HomeInventoryDatabase.gifts.push(woodPieces)
+HomeInventoryDatabase.gifts.push(postcards)
+HomeInventoryDatabase.gifts.push(heartPendant)
+
 //crafts
 const galaxyPainting = {
     name: "Black Galaxy",
@@ -41,6 +49,11 @@ const cubanPainting = {
     location: "Kitchen Wall",
     description: "My mother visited Cuba and bought a painting by a street artist."
 }
+
+HomeInventoryDatabase.crafts.push(galaxyPainting)
+HomeInventoryDatabase.crafts.push(emmanuelePainting)
+HomeInventoryDatabase.crafts.push(cubanPainting)
+
 //antiques
 const stetson = {
     name: "Papaw's Stetson",
@@ -58,5 +71,8 @@ const owls = {
     description: "My grandmother loved owls and collected statues of them. When she died, I asked to keep two."
 }
 
-  
+HomeInventoryDatabase.antiques.push(stetson)
+HomeInventoryDatabase.antiques.push(watchFace)
+HomeInventoryDatabase.antiques.push(owls)
 
+console.log(HomeInventoryDatabase)
