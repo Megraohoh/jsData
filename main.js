@@ -25,9 +25,23 @@ const heartPendant = {
     location: "Jewelry Box",
     description: "My dad gifted my mom the pendant and necklace years ago. She loves it but doesn't wear it anymore."
 }
-
 //crafts
 //antiques
+const stetson = {
+    name: "Papaw's Stetson",
+    location: "Original Stetson Box, closet",
+    description: "When my papaw heard I moved to Nashville he said I'd need a cowboy hat. He sent me his."
+}
+const watchFace = {
+    name: "Maternal Great-grandmother's Watch Face",
+    location: "Paternal Great-grandmother's Jewelry Box",
+    description: "My mother and I were sorting through old boxes of my grandmother's. We found her mother's watch face. I decided to keep it to one day have it cleaned and repaired."
+}
+const owls = {
+    name: "Grandma's Owl Statues",
+    location: "Dresser Top",
+    description: "My grandmother loved owls and collected statues of them. When she died, I asked to keep two."
+}
 
   
 
