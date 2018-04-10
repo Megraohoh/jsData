@@ -86,3 +86,40 @@ const saveDatabase = function (databaseObject, localStorageKey) {
     localStorage.setItem(localStorageKey, stringifiedDatabase)
 }
 saveDatabase(HomeInventoryDatabase, "HomeInventory")
+
+//Create DOM components
+const inventoryEl = document.querySelector("#my-inventory")
+//HomeInventoryDatabase is an object. Also objects:  furniture: [], crafts: [], electronics: []       type used below is referencing one of those objects. store the current array in 'currentTypeArray'.   Element will store the current item being iterated over
+
+//FYI never declare functions inside a for loop
+
+for (let type in HomeInventoryDatabase) {
+    const currentTypeArray = HomeInventoryDatabase[type]
+//forEach is used on arrays
+    currentTypeArray.forEach(itemInArray => {
+        const itemSection = document.createElement("section")
+
+        for (let prop in itemInArray) {
+            //prop = name, location, description
+            const pComponent = document.createElement("p")
+            pComponent.textContent = itemInArray[prop]
+            itemSection.appendChild(pComponent)
+            inventoryEl.appendChild(itemSection)
+        }
+
+//Long way to write 'p' for each element
+        // const nameP = document.createElement("p")
+        // nameP.textContent = itemInArray.name
+        // itemSection.appendChild(nameP)
+
+        // const locationP = document.createElement("p")
+        // nameP.textContent = itemInArray.name
+        // itemSection.appendChild(nameP)
+        
+        // const descP = document.createElement("p")
+        // nameP.textContent = itemInArray.name
+        // itemSection.appendChild(nameP)
+        
+        inventoryEl.appendChild(itemSection)
+    });
+}
